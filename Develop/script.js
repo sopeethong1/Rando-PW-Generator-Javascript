@@ -22,3 +22,5 @@ generateBtn.addEventListener("click", writePassword);
 
 //Define generatePassword
 //Return a value
+
+console.log("test")
