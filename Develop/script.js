@@ -1,12 +1,12 @@
 var generateBtn = document.querySelector("#generate");
-var abcUpper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var abcUpperArr = abcUpper.split("");
-var abcLower = "abcdefghijklmnopqrstuvwxyz";
-var abcLowerArr = abcLower.split("");
+var Upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var UpperArr = Upper.split("");
+var Lower = "abcdefghijklmnopqrstuvwxyz";
+var LowerArr = Lower.split("");
 var num = "0123456789";
 var numArr = num.split("");
-var sym = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~";
-var symArr = sym.split("");
+var symbol = "!#$%&\()*+,-./:;<=>?@^[\\]^_`{|}~";
+var symbolArr = symbol.split("");
 
 
 function writePassword() {
@@ -16,40 +16,45 @@ function writePassword() {
 }
 
 function generatePassword(){
-  return random
+  return newPassword
 }
+
  var allChars = [];
  var resultPass = "";
- var Totlength = prompt("How many characters would you like your password to be?");
+ var pwlength = prompt("How many characters would you like your password to contain?");
 
- if(Totlength <8 || Totlength > 128){
+ if(pwlength <8 || pwlength > 128){
      alert("Password must be between 8-126 characters.");
  }
+
  else{
-     if(confirm("Would you like your password to contain upper case letters?")){
-         Array.prototype.push.apply(allChars, abcUpperArr);
+     if(confirm("Would you like your password to contain upper-case letters?")){
+         Array.prototype.push.apply(allChars, UpperArr);
+
      }
 
-     if(confirm("Would you like your password to contain lower case letters?")){
-         Array.prototype.push.apply(allChars, abcLowerArr);
+     if(confirm("Would you like your password to contain lower-case letters?")){
+         Array.prototype.push.apply(allChars, LowerArr);
+
      }
 
      if(confirm("Would you like your password to contain numbers?")){
          Array.prototype.push.apply(allChars, numArr);
      }
 
+
      if(confirm("Would you like your password to contain symbols?")){
-         Array.prototype.push.apply(allChars, symArr);
+         Array.prototype.push.apply(allChars, symbolArr);
      }
 
-     if(allChars.length===0){
-         alert("You must select at lease 1 type of characters to generate a password!\nPlease start over.");
+     if(allChars.length==0){
+         alert("You must select a minimum of 1 character type.");
      }
 
      else{
-         for(var i=0; i<Totlength; i++){
-             var random = Math.floor(Math.random()*allChars.length);
-             resultPass += allChars[random];
+         for( i=0; i< pwlength; i++) {
+             var newPassword = Math.floor(Math.random()*allChars.length);
+             resultPass += allChars[newPassword];
          }
         
      }
