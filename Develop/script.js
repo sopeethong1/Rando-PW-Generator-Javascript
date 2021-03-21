@@ -10,9 +10,12 @@ function writePassword() {
 
 }
 
+var userChoice = prompt("How many characters would you like your password to contain?");
+console.log("userChoice: " + userChoice);
+
 function generatePassword() {
-//TODO: Write the code that asks user abt the paramenter 
-//TODO:Use those Parameters to cengerate a new password
+//TODO: Write the code that asks user abt the parameters for their pw
+//TODO:Use those Parameters to generate a new password
 //TODO: Return that password
   return "Temp Password";
 }
@@ -22,5 +25,13 @@ generateBtn.addEventListener("click", writePassword);
 
 //Define generatePassword
 //Return a value
+var specialChar = confirm("Click OK to confirm including special characters");
 
-console.log("test")
+
+var Num = confirm("Click OK to confirm including numeric characters");
+
+
+var specialChar = confirm("Click OK to confirm including lower-case characters");
+
+
+var specialChar = confirm("Click OK to confirm including upper-case characters");
