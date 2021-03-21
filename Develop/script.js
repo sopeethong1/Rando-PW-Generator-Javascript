@@ -15,8 +15,28 @@ console.log("userChoice: " + userChoice);
 
 function lowerCase() {
   return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-
 }
+
+function upperCase() {
+  return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
+}
+
+function randoNum() {
+  return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
+}
+
+function randoSpecialChar() {
+  const symbols = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
+  return symbols [Math.floor(math.random() * symbols.length)]
+}
+
+
+
+
+
+
+
+
 
 function generatePassword() {
 //TODO: Write the code that asks user abt the parameters for their pw
