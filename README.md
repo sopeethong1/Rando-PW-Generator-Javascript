@@ -5,3 +5,6 @@ Using Javascript, I modified starter code to create an application that enables 
 ## Link to Active App
 [link] https://sopeethong1.github.io/Rando-PW-Generator-Javascript/
 
+## Screenshot
+[Screenshot] 
+
